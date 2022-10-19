@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21225" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_0" orientation="portrait" appearance="light"/>
+    <device id="retina6_72" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21207"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -13,40 +13,57 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="farborakel_xcodeproj" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
+                        <rect key="frame" x="0.0" y="0.0" width="430" height="932"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPd-Ng-SUp">
-                                <rect key="frame" x="35" y="642" width="324" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="filled" title="Ändere die Farbe des Kreises"/>
-                                <connections>
-                                    <action selector="changeCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0W-oz-pWK"/>
-                                </connections>
-                            </button>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="CTZ-B9-Brj">
-                                <rect key="frame" x="77" y="302" width="240" height="240"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CTZ-B9-Brj">
+                                <rect key="frame" x="95" y="346" width="240" height="240"/>
                                 <color key="backgroundColor" systemColor="linkColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="240" id="54v-Fh-BAm"/>
+                                    <constraint firstAttribute="width" constant="240" id="7tR-YR-Sml"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="120"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlu-4M-Uve">
-                                <rect key="frame" x="35" y="134" width="324" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jlu-4M-Uve">
+                                <rect key="frame" x="70" y="231" width="290" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="5As-pS-h2M"/>
+                                    <constraint firstAttribute="width" constant="290" id="QyY-rE-NLq"/>
+                                </constraints>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Ändere die Farbe des Hintergrunds"/>
                                 <connections>
                                     <action selector="changeBG:" destination="BYZ-38-t0r" eventType="touchUpInside" id="c3M-pq-EUZ"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OPd-Ng-SUp">
+                                <rect key="frame" x="53" y="666" width="324" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="fO6-Be-RmJ"/>
+                                    <constraint firstAttribute="width" constant="324" id="u6L-AF-Ln9"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="filled" title="Ändere die Farbe des Kreises"/>
+                                <connections>
+                                    <action selector="changeCircle:" destination="BYZ-38-t0r" eventType="touchUpInside" id="f0W-oz-pWK"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="OPd-Ng-SUp" firstAttribute="top" secondItem="CTZ-B9-Brj" secondAttribute="bottom" constant="80" id="CYm-6v-maT"/>
+                            <constraint firstItem="CTZ-B9-Brj" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="LSm-Ec-PVF"/>
+                            <constraint firstItem="CTZ-B9-Brj" firstAttribute="top" secondItem="Jlu-4M-Uve" secondAttribute="bottom" constant="80" id="axi-Oy-OL8"/>
+                            <constraint firstItem="OPd-Ng-SUp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="fVu-yd-CJM"/>
+                            <constraint firstItem="CTZ-B9-Brj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vUj-5Z-L9x"/>
+                            <constraint firstItem="Jlu-4M-Uve" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zDv-Va-e6I"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="changBtnBg" destination="Jlu-4M-Uve" id="MSq-dn-vXH"/>
